@@ -33,22 +33,17 @@ recipient = 'molodcov.alexandr@yandex.ru'
 heading = 'Важно'
 type = 'text/plain; charset="UTF-8";' 
 
-letter = '''
-From: {address}
-To: {recipient}
-Subject: {heading}
-Content-Type: {type}
+letter = '''\
+From: sannikova-school@yandex.ru
+To: molodcov.alexandr@yandex.ru
+Subject: Важно
+Content-Type: text/plain; charset="UTF-8";
+
 
 ''' + shablon.format(address=address, recipient=recipient,heading=heading,type=type)
 
+
 letter = letter.encode("UTF-8")
-
-
-
-server = smtplib.SMTP_SSL('smtp.yandex.ru:465')
-server.login(login, password)
-
-
 
 server = smtplib.SMTP_SSL('smtp.yandex.ru:465')
 server.login(login, password)
