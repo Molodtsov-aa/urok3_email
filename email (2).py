@@ -34,13 +34,13 @@ heading = 'Важно'
 type = 'text/plain; charset="UTF-8";' 
 
 letter = '''\
-From: sannikova-school@yandex.ru
-To: molodcov.alexandr@yandex.ru
+From: {address}
+To: {recipient}
 Subject: Важно
 Content-Type: text/plain; charset="UTF-8";
 
 
-''' + shablon.format(address=address, recipient=recipient,heading=heading,type=type)
+'''.format(address=address, recipient=recipient,heading=heading,type=type) + shablon.format(address=address, recipient=recipient,heading=heading,type=type)
 
 
 letter = letter.encode("UTF-8")
